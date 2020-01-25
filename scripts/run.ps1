@@ -69,7 +69,7 @@ function Install() {
     }
     
     Pull-Setup
-    docker run -it --rm --name setup -v ${outputDir}:/bitwarden bitwarden/setup:$coreVersion `
+    docker run -it --rm --name setup -v ${outputDir}:/bitwarden openbitwarden/setup:$coreVersion `
         dotnet Setup.dll -install 1 -domain ${domain} -letsencrypt ${letsEncrypt} `
         -os win -corev $coreVersion -webv $webVersion -q $setupQuiet
 }
@@ -119,7 +119,7 @@ function Update-Database {
     Docker-Compose-Files
     $mssqlId = docker-compose ps -q mssql
     docker run -it --rm --name setup --network container:$mssqlId `
-        -v ${outputDir}:/bitwarden bitwarden/setup:$coreVersion `
+        -v ${outputDir}:/bitwarden openbitwarden/setup:$coreVersion `
         dotnet Setup.dll -update 1 -db 1 -os win -corev $coreVersion -webv $webVersion -q $setupQuiet
     Write-Line "Database update complete"
 }
@@ -128,13 +128,13 @@ function Update([switch] $withpull) {
     if ($withpull) {
         Pull-Setup
     }
-    docker run -it --rm --name setup -v ${outputDir}:/bitwarden bitwarden/setup:$coreVersion `
+    docker run -it --rm --name setup -v ${outputDir}:/bitwarden openbitwarden/setup:$coreVersion `
         dotnet Setup.dll -update 1 -os win -corev $coreVersion -webv $webVersion -q $setupQuiet
 }
 
 function Print-Environment {
     Pull-Setup
-    docker run -it --rm --name setup -v ${outputDir}:/bitwarden bitwarden/setup:$coreVersion `
+    docker run -it --rm --name setup -v ${outputDir}:/bitwarden openbitwarden/setup:$coreVersion `
         dotnet Setup.dll -printenv 1 -os win -corev $coreVersion -webv $webVersion -q $setupQuiet
 }
 
@@ -147,7 +147,7 @@ function Restart {
 }
 
 function Pull-Setup {
-    Invoke-Expression ("docker pull{0} bitwarden/setup:${coreVersion}" -f "") #TODO: qFlag
+    Invoke-Expression ("docker pull{0} openbitwarden/setup:${coreVersion}" -f "") #TODO: qFlag
 }
 
 function Write-Line($str) {
