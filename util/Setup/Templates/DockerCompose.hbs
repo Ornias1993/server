@@ -35,7 +35,7 @@ services:
       - ../env/mssql.override.env
 
   web:
-    image: openbitwarden/web:{{{WebVersion}}}
+    image: bitwarden/web:{{{WebVersion}}}
     container_name: bitwarden-web
     restart: always
     volumes:
