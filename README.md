@@ -2,14 +2,14 @@
   <img src="https://github.com/bitwarden/brand/blob/master/screenshots/apps-combo-logo.png" alt="Bitwarden" />
 </p>
 <p align="center">
-  <a href="https://ci.appveyor.com/project/bitwarden/server/branch/master" target="_blank">
-    <img src="https://ci.appveyor.com/api/projects/status/n4ntjp7ag1uwxckd/branch/master?svg=true" alt="appveyor build" />
+  <a href="https://ci.appveyor.com/project/open-bitwarden/server/branch/master" target="_blank">
+    <img src="https://ci.appveyor.com/api/projects/status/5la21itpjfg9my89/branch/master?svg=true" alt="appveyor build" />
   </a>
-  <a href="https://hub.docker.com/u/bitwarden/" target="_blank">
-    <img src="https://img.shields.io/docker/pulls/bitwarden/api.svg" alt="DockerHub" />
+  <a href="https://hub.docker.com/u/open-bitwarden/" target="_blank">
+    <img src="https://img.shields.io/docker/pulls/open-bitwarden/api.svg" alt="DockerHub" />
   </a>
-  <a href="https://gitter.im/bitwarden/Lobby" target="_blank">
-    <img src="https://badges.gitter.im/bitwarden/Lobby.svg" alt="gitter chat" />
+  <a href="https://gitter.im/open-bitwarden/Lobby" target="_blank">
+    <img src="https://badges.gitter.im/open-bitwarden/Lobby.svg" alt="gitter chat" />
   </a>
 </p>
 
