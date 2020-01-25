@@ -30,7 +30,9 @@ The Bitwarden Server project contains the APIs, database, and other core infrast
 
 The server project is written in C# using .NET Core with ASP.NET Core. The database is written in T-SQL/SQL Server. The codebase can be developed, built, run, and deployed cross-platform on Windows, macOS, and Linux distributions.
 
-## Build/Run
+
+
+## Development Build/Run
 
 ### Requirements
 
@@ -106,6 +108,10 @@ Invoke-RestMethod -OutFile bitwarden.ps1 `
 .\bitwarden.ps1 -install
 .\bitwarden.ps1 -start
 ```
+### Using without Licence
+Currently we just overruled the checks on licences.
+You can safely include the 2 included beta licence keys (under /licences) to bybass licencing.
+Just use them like you would use a normal licence.
 
 ## Contribute
 
