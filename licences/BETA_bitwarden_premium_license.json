@@ -1,0 +1,15 @@
+{
+  "LicenseKey": "8a7xakFDQsKBBDCbGwfd",
+  "Id": "a8d25147-448c-4fea-8553-a7d7001807c3",
+  "Name": "Beta Test",
+  "Email": "betatesting@bitwarden.com",
+  "Premium": true,
+  "MaxStorageGb": 1,
+  "Version": 1,
+  "Issued": "2017-08-22T01:35:55.8440494Z",
+  "Refresh": "2017-09-21T01:35:55.8440494Z",
+  "Expires": "2017-09-21T01:35:55.8440494Z",
+  "Trial": false,
+  "Hash": "pVAR580q9W7nf+MxPtTWs5SZc+DjMa44MZ2hLiQwums=",
+  "Signature": "HbbcFCkcTJsBdXXLviMrmGNJHwQU//U5bc5GAa/vDe8K0apdjwLIDe13yO1N7MOtU746NzZ0hSQ2+o/pLLl2PCIAzkCxRkFl7LWNGUFiR4bM5VhZmMVMC1RxO5EDPfi/et3v6ItQMB4tsiDINHKr0/pbMQQODhVestxZ4857iJ4mkuJQUZ1FLxa5xT93j2aFR+UfQzcaIwtqxirsYD8nWIggYMFYnec5Tg0uUzVRaIbs6vBN6gHj30qUU3/URDpS7H9RorTCVdsLQmljg3j/inB+co6oPcHZo2Tb4OmWWoGykoUTrPDCTw3498egpWASH/AqAQH0Kq9RsW2Q4fiIUicEt2zNqTYfTOIUxmI9EaTMobarZONumfKxR6RElKfGO3DeZW5gzvFBWP0WNVC+efNUz7VFj9jc/Y9amkN7ooT4fyhB52/A2K7LTXOwVdg2UvobVdS6cQzXyO9uQ5dIkCr/Rer2kD9EJqtOpvUPUItooCxaaFmjRuit5athyi9PbRlpqrHKPMD6n77iW9BZyWD50mj3gCy08DQLjKlMHDyRmRLvbon+RfLkypkdPgPzOVOchrieF2HIo3r6wlQduPtFIQFq/Oy2GIagfiZY5iGHhgJ2pi4DV3iAkJyQi3lFzC8G1QddUA8imZLLxQLM+YNl7sIBi0fGirkD9nWteJU="
+}
