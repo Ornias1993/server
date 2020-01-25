@@ -17,7 +17,7 @@ version: '{{{ComposeVersion}}}'
 
 services:
   mssql:
-    image: openbitwarden/mssql:{{{CoreVersion}}}
+    image: bitwarden/mssql:{{{CoreVersion}}}
     container_name: bitwarden-mssql
     restart: always
     stop_grace_period: 60s
@@ -35,7 +35,7 @@ services:
       - ../env/mssql.override.env
 
   web:
-    image: openbitwarden/web:{{{WebVersion}}}
+    image: bitwarden/web:{{{WebVersion}}}
     container_name: bitwarden-web
     restart: always
     volumes:
@@ -45,7 +45,7 @@ services:
       - ../env/uid.env
 
   attachments:
-    image: openbitwarden/attachments:{{{CoreVersion}}}
+    image: bitwarden/attachments:{{{CoreVersion}}}
     container_name: bitwarden-attachments
     restart: always
     volumes:
@@ -55,7 +55,7 @@ services:
       - ../env/uid.env
 
   api:
-    image: openbitwarden/api:{{{CoreVersion}}}
+    image: bitwarden/api:{{{CoreVersion}}}
     container_name: bitwarden-api
     restart: always
     volumes:
@@ -71,7 +71,7 @@ services:
       - public
 
   identity:
-    image: openbitwarden/identity:{{{CoreVersion}}}
+    image: bitwarden/identity:{{{CoreVersion}}}
     container_name: bitwarden-identity
     restart: always
     volumes:
@@ -88,7 +88,7 @@ services:
       - public
 
   admin:
-    image: openbitwarden/admin:{{{CoreVersion}}}
+    image: bitwarden/admin:{{{CoreVersion}}}
     container_name: bitwarden-admin
     restart: always
     depends_on:
@@ -106,7 +106,7 @@ services:
       - public
 
   icons:
-    image: openbitwarden/icons:{{{CoreVersion}}}
+    image: bitwarden/icons:{{{CoreVersion}}}
     container_name: bitwarden-icons
     restart: always
     volumes:
@@ -120,7 +120,7 @@ services:
       - public
 
   notifications:
-    image: openbitwarden/notifications:{{{CoreVersion}}}
+    image: bitwarden/notifications:{{{CoreVersion}}}
     container_name: bitwarden-notifications
     restart: always
     volumes:
@@ -135,7 +135,7 @@ services:
       - public
 
   events:
-    image: openbitwarden/events:{{{CoreVersion}}}
+    image: bitwarden/events:{{{CoreVersion}}}
     container_name: bitwarden-events
     restart: always
     volumes:
@@ -150,7 +150,7 @@ services:
       - public
 
   nginx:
-    image: openbitwarden/nginx:{{{CoreVersion}}}
+    image: bitwarden/nginx:{{{CoreVersion}}}
     container_name: bitwarden-nginx
     restart: always
     depends_on:

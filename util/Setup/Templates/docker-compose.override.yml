@@ -1,0 +1,30 @@
+﻿services:
+  mssql:
+    image: openbitwarden/mssql:{{{CoreVersion}}}
+
+  web:
+    image: openbitwarden/web:{{{WebVersion}}}
+
+  attachments:
+    image: openbitwarden/attachments:{{{CoreVersion}}}
+
+  api:
+    image: openbitwarden/api:{{{CoreVersion}}}
+
+  identity:
+    image: openbitwarden/identity:{{{CoreVersion}}}
+
+  admin:
+    image: openbitwarden/admin:{{{CoreVersion}}}
+
+  icons:
+    image: openbitwarden/icons:{{{CoreVersion}}}
+
+  notifications:
+    image: openbitwarden/notifications:{{{CoreVersion}}}
+
+  events:
+    image: openbitwarden/events:{{{CoreVersion}}}
+
+  nginx:
+    image: openbitwarden/nginx:{{{CoreVersion}}}
