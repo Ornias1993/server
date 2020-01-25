@@ -5,7 +5,7 @@
   <a href="https://ci.appveyor.com/project/open-bitwarden/server/branch/master" target="_blank">
     <img src="https://ci.appveyor.com/api/projects/status/5la21itpjfg9my89/branch/master?svg=true" alt="appveyor build" />
   </a>
-  <a href="https://hub.docker.com/u/open-bitwarden/" target="_blank">
+  <a href="https://hub.docker.com/u/openbitwarden/" target="_blank">
     <img src="https://img.shields.io/docker/pulls/open-bitwarden/api.svg" alt="DockerHub" />
   </a>
   <a href="https://gitter.im/open-bitwarden/Lobby" target="_blank">
