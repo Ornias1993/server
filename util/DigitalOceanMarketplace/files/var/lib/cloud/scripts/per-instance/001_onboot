@@ -12,6 +12,6 @@
 docker pull bitwarden/setup
 
 curl -s -o /root/bitwarden.sh \
-    https://raw.githubusercontent.com/bitwarden/server/master/scripts/bitwarden.sh
+    https://raw.githubusercontent.com/open-bitwarden/server/master/scripts/bitwarden.sh
 
 chmod +x /root/bitwarden.sh
