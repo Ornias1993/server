@@ -18,7 +18,10 @@
 Open Bitwarden is a project dedicated to make Bitwarden true Open Source and Free software.
 Without arbitrairy licence restrictions that have no legal backing due to the AGPL licence.
 
-While doing this we try and limit the scope of any changes made, to guarantee quality.
+By creating a custom project, we are able to utilise the same deployment process as Bitwarden uses.
+This way anyone (even without thorough development knowhow) should be able to run this without licences.
+
+While doing this we try and limit the scope of any changes made, to guarantee code quality and compatibility.
 Any fixed found/made will be send upstream and issues (outside of licencing) should also be send there.
 
 -------------------
@@ -33,6 +36,7 @@ The server project is written in C# using .NET Core with ASP.NET Core. The datab
 
 - [.NET Core 2.x SDK](https://www.microsoft.com/net/download/core)
 - [SQL Server 2017](https://docs.microsoft.com/en-us/sql/index)
+- 2GB+ RAM
 
 *These dependencies are free to use.*
 
