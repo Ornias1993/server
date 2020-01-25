@@ -9,39 +9,39 @@ if [ $# -gt 1 -a "$1" == "push" ]
 then
     TAG=$2
 
-    echo "Pushing Bitwarden ($TAG)"
+    echo "Pushing Open-Bitwarden ($TAG)"
     echo "========================"
     
-    docker push bitwarden/api:$TAG
-    docker push bitwarden/identity:$TAG
-    docker push bitwarden/server:$TAG
-    docker push bitwarden/attachments:$TAG
-    docker push bitwarden/icons:$TAG
-    docker push bitwarden/notifications:$TAG
-    docker push bitwarden/events:$TAG
-    docker push bitwarden/admin:$TAG
-    docker push bitwarden/nginx:$TAG
-    docker push bitwarden/mssql:$TAG
-    docker push bitwarden/setup:$TAG
+    docker push openbitwarden/api:$TAG
+    docker push openbitwarden/identity:$TAG
+    docker push openbitwarden/server:$TAG
+    docker push openbitwarden/attachments:$TAG
+    docker push openbitwarden/icons:$TAG
+    docker push openbitwarden/notifications:$TAG
+    docker push openbitwarden/events:$TAG
+    docker push openbitwarden/admin:$TAG
+    docker push openbitwarden/nginx:$TAG
+    docker push openbitwarden/mssql:$TAG
+    docker push openbitwarden/setup:$TAG
 elif [ $# -gt 1 -a "$1" == "tag" ]
 then
     TAG=$2
     
-    echo "Tagging Bitwarden as '$TAG'"
+    echo "Tagging Open-Bitwarden as '$TAG'"
     
-    docker tag bitwarden/api bitwarden/api:$TAG
-    docker tag bitwarden/identity bitwarden/identity:$TAG
-    docker tag bitwarden/server bitwarden/server:$TAG
-    docker tag bitwarden/attachments bitwarden/attachments:$TAG
-    docker tag bitwarden/icons bitwarden/icons:$TAG
-    docker tag bitwarden/notifications bitwarden/notifications:$TAG
-    docker tag bitwarden/events bitwarden/events:$TAG
-    docker tag bitwarden/admin bitwarden/admin:$TAG
-    docker tag bitwarden/nginx bitwarden/nginx:$TAG
-    docker tag bitwarden/mssql bitwarden/mssql:$TAG
-    docker tag bitwarden/setup bitwarden/setup:$TAG
+    docker tag openbitwarden/api openbitwarden/api:$TAG
+    docker tag openbitwarden/identity openbitwarden/identity:$TAG
+    docker tag openbitwarden/server openbitwarden/server:$TAG
+    docker tag openbitwarden/attachments openbitwarden/attachments:$TAG
+    docker tag openbitwarden/icons openbitwarden/icons:$TAG
+    docker tag openbitwarden/notifications openbitwarden/notifications:$TAG
+    docker tag openbitwarden/events openbitwarden/events:$TAG
+    docker tag openbitwarden/admin openbitwarden/admin:$TAG
+    docker tag openbitwarden/nginx openbitwarden/nginx:$TAG
+    docker tag openbitwarden/mssql openbitwarden/mssql:$TAG
+    docker tag openbitwarden/setup openbitwarden/setup:$TAG
 else
-    echo "Building Bitwarden"
+    echo "Building Open-Bitwarden"
     echo "=================="
 
     chmod u+x $DIR/src/Api/build.sh
