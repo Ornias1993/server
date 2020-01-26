@@ -171,8 +171,8 @@ namespace Bit.Core.Utilities
 
         public async static Task<X509Certificate2> GetEmbeddedCertificateAsync(string file, string password)
         {
-            var assembly = typeof(CoreHelpers).GetTypeInfo().Assembly;
-            using(var s = assembly.GetManifestResourceStream($"Bit.Core.{file}"))
+            var dir = AppDomain.CurrentDomain.RelativeSearchPath ?? AppDomain.CurrentDomain.BaseDirectory;
+            using (var s = File.OpenRead(dir + "/" + file))
             using(var ms = new MemoryStream())
             {
                 await s.CopyToAsync(ms);

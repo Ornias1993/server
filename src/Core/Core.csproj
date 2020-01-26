@@ -16,7 +16,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="licensing.cer" />
     <EmbeddedResource Include="MailTemplates\Handlebars\**\*.hbs" />
   </ItemGroup>
 
@@ -58,6 +57,12 @@
     <PackageReference Include="Otp.NET" Version="1.2.2" />
     <PackageReference Include="YubicoDotNetClient" Version="1.2.0" />
     <PackageReference Include="System.Data.SqlClient" Version="4.8.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="licensing.cer">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

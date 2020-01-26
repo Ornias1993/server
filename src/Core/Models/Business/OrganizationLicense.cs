@@ -170,8 +170,7 @@ namespace Bit.Core.Models.Business
 
         public bool CanUse(GlobalSettings globalSettings)
         {
-            return true;
-            if (!Enabled || Issued > DateTime.UtcNow || Expires < DateTime.UtcNow)
+            if(!Enabled || Issued > DateTime.UtcNow || Expires < DateTime.UtcNow)
             {
                 return false;
             }
@@ -243,8 +242,7 @@ namespace Bit.Core.Models.Business
 
         public bool VerifySignature(X509Certificate2 certificate)
         {
-            return true;
-            using (var rsa = certificate.GetRSAPublicKey())
+            using(var rsa = certificate.GetRSAPublicKey())
             {
                 return rsa.VerifyData(GetDataBytes(), SignatureBytes, HashAlgorithmName.SHA256, RSASignaturePadding.Pkcs1);
             }

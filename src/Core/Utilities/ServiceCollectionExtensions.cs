@@ -116,7 +116,7 @@ namespace Bit.Core.Utilities
         {
             services.AddSingleton<IPaymentService, StripePaymentService>();
             services.AddSingleton<IMailService, HandlebarsMailService>();
-            services.AddSingleton<ILicensingService, NoopLicensingService>();
+            services.AddSingleton<ILicensingService, LicensingService>();
 
             if(CoreHelpers.SettingHasValue(globalSettings.ServiceBus.ConnectionString) &&
                 CoreHelpers.SettingHasValue(globalSettings.ServiceBus.ApplicationCacheTopicName))
