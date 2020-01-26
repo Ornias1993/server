@@ -12,8 +12,6 @@ RUN apt-get update \
 
 WORKDIR /LicenceGen
 COPY obj/Docker/publish/LicenceGen .
-COPY entrypoint.sh /
-RUN chmod +x /entrypoint.sh
 
-ENTRYPOINT [ "dotnet", "/app/licenseGen.dll", "--core", "/app/Core.dll", "--cert", "/cert.pfx" ]
+ENTRYPOINT [ "dotnet", "/licenseGen.dll", "--core", "/Core.dll", "--cert", "/cert.pfx" ]
 
