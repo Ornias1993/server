@@ -46,6 +46,12 @@ namespace Bit.Core.Services
                 "‎B34876439FCDA2846505B2EFBBA6C4A951313EBE";
             if(_globalSettings.SelfHosted)
             {
+                var dir = AppDomain.CurrentDomain.RelativeSearchPath ?? AppDomain.CurrentDomain.BaseDirectory;
+                var certfile = File.ReadAllBytes(dir + "/licensing.cer");
+                X509Certificate2 certificate = new X509Certificate2(certfile);
+                certThumbprint = environment.IsDevelopment() ? "207E64A231E8AA32AAF68A61037C075EBEBD553F" :
+                certificate.Thumbprint;
+
                 _certificate = CoreHelpers.GetEmbeddedCertificateAsync("licensing.cer", null)
                     .GetAwaiter().GetResult();
             }
