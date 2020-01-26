@@ -6,10 +6,7 @@
     <img src="https://ci.appveyor.com/api/projects/status/5la21itpjfg9my89/branch/master?svg=true" alt="appveyor build" />
   </a>
   <a href="https://hub.docker.com/u/openbitwarden/" target="_blank">
-    <img src="https://img.shields.io/docker/pulls/open-bitwarden/api.svg" alt="DockerHub" />
-  </a>
-  <a href="https://gitter.im/open-bitwarden/Lobby" target="_blank">
-    <img src="https://badges.gitter.im/open-bitwarden/Lobby.svg" alt="gitter chat" />
+    <img src="https://img.shields.io/docker/pulls/openbitwarden/api.svg" alt="DockerHub" />
   </a>
 </p>
 
