@@ -76,8 +76,8 @@ else
     chmod u+x $DIR/util/MsSql/build.sh
     $DIR/util/MsSql/build.sh
 
-    chmod u+x $DIR/src/licensegen/build.sh
-    $DIR/src/licensegen/build.sh
+    chmod u+x $DIR/src/LicenseGen/build.sh
+    $DIR/src/LicenseGen/build.sh
 
     chmod u+x $DIR/util/Setup/build.sh
     $DIR/util/Setup/build.sh
