@@ -37,7 +37,9 @@ mkdir -p /etc/bitwarden/ca-certificates
 chown -R $USERNAME:$GROUPNAME /etc/bitwarden
 
 cp /etc/bitwarden/identity/identity.pfx /app/identity.pfx
-cp /etc/bitwarden/licensing/licensing.cer /app/licensing.cer
+if [ -e /app/licensing.cer ]
+ then cp /etc/bitwarden/licensing/licensing.cer /app/licensing.cer
+fi
 chown -R $USERNAME:$GROUPNAME /app
 
 cp /etc/bitwarden/ca-certificates/*.crt /usr/local/share/ca-certificates/ >/dev/null 2>&1 \
