@@ -1,14 +1,19 @@
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1
 
-WORKDIR /licenseGen
+FROM mcr.microsoft.com/dotnet/core/sdk:3.1
 
-COPY . /licenseGen
+LABEL com.bitwarden.product="bitwarden"
 
-RUN set -e; set -x; \
-	dotnet add package Newtonsoft.Json --version 12.0.3 \
-	&& dotnet restore \
-	&& dotnet publish
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends \
+        gosu \
+        curl \
+    && rm -rf /var/lib/apt/lists/*
 
-COPY /licenseGen/bin/Debug/netcoreapp3.1/publish/* /app/
+WORKDIR /LicenceGen
+COPY obj/Docker/publish/LicenceGen .
+COPY entrypoint.sh /
+RUN chmod +x /entrypoint.sh
 
 ENTRYPOINT [ "dotnet", "/app/licenseGen.dll", "--core", "/app/Core.dll", "--cert", "/cert.pfx" ]
+
