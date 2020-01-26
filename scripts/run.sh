@@ -162,6 +162,13 @@ function pullSetup() {
     docker pull openbitwarden/setup:$COREVERSION
 }
 
+function gen-license(){
+	echo "TESTRUN LICENSE"
+	docker run -it --rm -v $OUTPUT_DIR/licensing:/etc/bitwarden/licensing \
+	openbitwarden/licensegen:$COREVERSION dotnet licenseGen.dll \
+	--cert /etc/bitwarden/licensing/cert.pfx --core /LicenceGen/Core.dll interactive
+}
+
 # Commands
 
 if [ "$1" == "install" ]
@@ -183,6 +190,9 @@ then
 elif [ "$1" == "updatedb" ]
 then
     updateDatabase
+elif [ "$1" == "gen-license" ]
+then
+    gen-license
 elif [ "$1" == "update" ]
 then
     dockerComposeDown

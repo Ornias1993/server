@@ -127,6 +127,10 @@ elif [ "$1" == "stop" ]
 then
     checkOutputDirExists
     $SCRIPTS_DIR/run.sh stop $OUTPUT $COREVERSION $WEBVERSION
+elif [ "$1" == "gen-license" ]
+then
+    checkOutputDirExists
+    $SCRIPTS_DIR/run.sh gen-license $OUTPUT $COREVERSION $WEBVERSION
 elif [ "$1" == "updaterun" ]
 then
     checkOutputDirExists
