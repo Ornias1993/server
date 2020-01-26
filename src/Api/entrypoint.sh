@@ -36,7 +36,7 @@ mkdir -p /etc/bitwarden/logs
 mkdir -p /etc/bitwarden/ca-certificates
 chown -R $USERNAME:$GROUPNAME /etc/bitwarden
 
-if [ -e /app/licensing.cer ]
+if [ -e /etc/bitwarden/licensing/licensing.cer ]
  then cp /etc/bitwarden/licensing/licensing.cer /app/licensing.cer
 fi
 chown -R $USERNAME:$GROUPNAME /app
