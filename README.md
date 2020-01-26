@@ -94,7 +94,7 @@ Full documentation for deploying Bitwarden with Docker can be found in our help 
 
 ```
 curl -s -o bitwarden.sh \
-    https://raw.githubusercontent.com/bitwarden/server/master/scripts/bitwarden.sh \
+    https://raw.githubusercontent.com/open-bitwarden/server/master/scripts/bitwarden.sh \
     && chmod +x bitwarden.sh
 ./bitwarden.sh install
 ./bitwarden.sh start
@@ -104,7 +104,7 @@ curl -s -o bitwarden.sh \
 
 ```
 Invoke-RestMethod -OutFile bitwarden.ps1 `
-    -Uri https://raw.githubusercontent.com/bitwarden/server/master/scripts/bitwarden.ps1
+    -Uri https://raw.githubusercontent.com/open-bitwarden/server/master/scripts/bitwarden.ps1
 .\bitwarden.ps1 -install
 .\bitwarden.ps1 -start
 ```
