@@ -13,5 +13,3 @@ RUN apt-get update \
 WORKDIR /LicenceGen
 COPY obj/Docker/publish/LicenceGen .
 
-ENTRYPOINT [ "dotnet", "/licenseGen.dll", "--core", "/Core.dll", "--cert", "/cert.pfx" ]
-

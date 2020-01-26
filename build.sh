@@ -22,6 +22,7 @@ then
     docker push openbitwarden/admin:$TAG
     docker push openbitwarden/nginx:$TAG
     docker push openbitwarden/mssql:$TAG
+    docker push openbitwarden/licensegen:$TAG
     docker push openbitwarden/setup:$TAG
 elif [ $# -gt 1 -a "$1" == "tag" ]
 then
@@ -39,6 +40,7 @@ then
     docker tag openbitwarden/admin openbitwarden/admin:$TAG
     docker tag openbitwarden/nginx openbitwarden/nginx:$TAG
     docker tag openbitwarden/mssql openbitwarden/mssql:$TAG
+    docker tag openbitwarden/licensegen openbitwarden/licensegen:$TAG
     docker tag openbitwarden/setup openbitwarden/setup:$TAG
 else
     echo "Building Open-Bitwarden"
@@ -73,6 +75,9 @@ else
 
     chmod u+x $DIR/util/MsSql/build.sh
     $DIR/util/MsSql/build.sh
+
+    chmod u+x $DIR/src/licensegen/build.sh
+    $DIR/src/licensegen/build.sh
 
     chmod u+x $DIR/util/Setup/build.sh
     $DIR/util/Setup/build.sh

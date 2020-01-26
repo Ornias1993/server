@@ -89,6 +89,21 @@ services:
       - default
       - public
 
+  licensegen:
+    image: openbitwarden/licensegen:{{{CoreVersion}}}
+    container_name: bitwarden-licensegen
+    restart: always
+    command: tail -f /dev/null
+    volumes:
+      - ../licensing:/etc/bitwarden/licensing
+    env_file:
+      - global.env
+      - ../env/uid.env
+      - ../env/global.override.env
+    networks:
+      - default
+      - public
+
   admin:
     image: openbitwarden/admin:{{{CoreVersion}}}
     container_name: bitwarden-admin
