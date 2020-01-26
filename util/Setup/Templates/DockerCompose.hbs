@@ -59,6 +59,7 @@ services:
     container_name: bitwarden-api
     restart: always
     volumes:
+      - ../licensing:/etc/bitwarden/licensing
       - ../core:/etc/bitwarden/core
       - ../ca-certificates:/etc/bitwarden/ca-certificates
       - ../logs/api:/etc/bitwarden/logs
@@ -75,6 +76,7 @@ services:
     container_name: bitwarden-identity
     restart: always
     volumes:
+      - ../licensing:/etc/bitwarden/licensing
       - ../identity:/etc/bitwarden/identity
       - ../core:/etc/bitwarden/core
       - ../ca-certificates:/etc/bitwarden/ca-certificates

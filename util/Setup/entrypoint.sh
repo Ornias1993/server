@@ -30,6 +30,7 @@ mkhomedir_helper $USERNAME
 # The rest...
 
 chown -R $USERNAME:$GROUPNAME /app
+mkdir -p /bitwarden/licensing
 mkdir -p /bitwarden/env
 mkdir -p /bitwarden/docker
 mkdir -p /bitwarden/ssl

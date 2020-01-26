@@ -29,6 +29,7 @@ mkhomedir_helper $USERNAME
 
 # The rest...
 
+mkdir -p /etc/bitwarden/licensing
 mkdir -p /etc/bitwarden/identity
 mkdir -p /etc/bitwarden/core
 mkdir -p /etc/bitwarden/logs
